@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="독일 증시 및 글로벌 주요 시장의 객관적 데이터와 시황 분석 리포트를 무료로 받아보세요. 투자 참고용 정보 공유 서비스입니다." />
+  <meta name="robots" content="index, follow" />
+  <title>글로벌 증시 데이터 리포트 | 독일 시황 무료 구독</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://your-domain.com/index.html" />
+
+  <!-- ================== [ 전역 추적 코드 / Global Tracking ] ==================
+       ★ 모든 ID·링크는 config.js 한 곳에서만 수정합니다.
+         이 블록은 config.js 값을 읽어 gtag 를 자동 초기화합니다. (수정 불필요)
+  ========================================================================== -->
+  <script src="config.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    (function () {
+      var cfg = window.LP_CONFIG || {};
+      // gtag.js 를 GA4 ID 로 동적 로드
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(cfg.GA4_ID || '');
+      document.head.appendChild(s);
+      // GA4 + Google Ads 기본 설정
+      if (cfg.GA4_ID) gtag('config', cfg.GA4_ID);
+      if (cfg.ADS_ID) gtag('config', cfg.ADS_ID);
+    })();
+  </script>
+  <!-- ======================================================================== -->
+
+  <!-- 로컬 스타일시트 -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- ============ 상단 긴급성 배너 ============ -->
+    <div class="urgency-banner">
+      <span class="dot dot-accent pulse-dot"></span>
+      <span class="txt">오늘의 시장 분석 보고서가 업데이트되었습니다!</span>
+    </div>
+
+    <!-- ============ 실시간 티커 (참고용 명시) ============ -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>DAX <span class="up">25,069 &#9650;0.69%</span></span>
+          <span>유로스톡스50 <span class="up">6,251 &#9650;0.75%</span></span>
+          <span>S&amp;P500 <span class="down">7,482 &#9660;0.28%</span></span>
+          <span>EUR/KRW <span class="up">1,727 &#9650;0.67%</span></span>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>DAX <span class="up">25,069 &#9650;0.69%</span></span>
+          <span>유로스톡스50 <span class="up">6,251 &#9650;0.75%</span></span>
+          <span>S&amp;P500 <span class="down">7,482 &#9660;0.28%</span></span>
+          <span>EUR/KRW <span class="up">1,727 &#9650;0.67%</span></span>
+        </div>
+      </div>
+    </div>
+    <p class="ticker-note">* 상기 수치는 예시 참고용이며 실시간 시세와 다를 수 있습니다.</p>
+
+    <!-- ============ 히어로 ============ -->
+    <header class="hero fade-in">
+      <div class="brand-row">
+        <div class="brand-logo">G</div>
+        <span class="brand-name">글로벌 마켓 인사이트</span>
+      </div>
+
+      <h1>
+        오늘 독일 DAX,<br />
+        왜 <span class="accent-text">이렇게 움직였을까요?</span>
+      </h1>
+
+      <p class="lead">
+        매일 아침 8시 30분, 독일·유럽 증시가 왜 오르고 내렸는지
+        핵심만 짚어 드립니다. 지금 오늘 자료가 준비됐어요.
+      </p>
+
+      <div class="badges">
+        <span class="badge badge-blue">&#10003; 구독료 0원</span>
+        <span class="badge badge-amber">오늘 신청분까지만 발송</span>
+        <span class="badge badge-gray">&#128274; 정보 암호화 보관</span>
+      </div>
+    </header>
+
+    <!-- ============ 히어로 이미지 (프랑크푸르트 금융지구) ============ -->
+    <div class="hero-photo">
+      <img src="images/hero-frankfurt.jpg" alt="독일 프랑크푸르트 금융 중심가 전경"
+           width="1200" height="900" loading="eager" decoding="async" />
+      <span class="hero-photo-cap">독일 프랑크푸르트 · 유럽 금융의 중심</span>
+    </div>
+
+    <!-- ============ 히어로 카드 (실제감 데이터 차트) ============ -->
+    <div class="hero-card">
+      <div class="chart-head" data-symbol="dax">
+        <div>
+          <p class="chart-name">독일 DAX 40</p>
+          <p class="chart-price"><span class="chart-price-val">25,069.81</span> <span class="chart-chg up">+172.36 (+0.69%)</span></p>
+        </div>
+        <span class="chart-live"><span class="live-dot"></span><span data-market="updated-short">오늘 08:30</span> 기준</span>
+      </div>
+
+      <!-- 최근 5거래일 종가 흐름 (예시 데이터) -->
+      <svg class="chart-svg" viewBox="0 0 300 90" preserveAspectRatio="none" aria-label="DAX 최근 흐름 차트">
+        <defs>
+          <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#34d399" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#34d399" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <path d="M0,70 L60,58 L120,64 L180,40 L240,34 L300,20 L300,90 L0,90 Z" fill="url(#area)" />
+        <path d="M0,70 L60,58 L120,64 L180,40 L240,34 L300,20" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="300" cy="20" r="3.5" fill="#34d399" />
+      </svg>
+      <div class="chart-xaxis">
+        <span>월</span><span>화</span><span>수</span><span>목</span><span>금</span>
+      </div>
+
+      <p class="chart-foot">* 예시 참고용 데이터입니다. 실제 구독 리포트에는 당일 기준 시황이 담깁니다.</p>
+      <span class="blob"></span>
+    </div>
+
+    <!-- ============ 리드 폼 ============ -->
+    <section id="subscribe" class="section mt-6">
+      <div class="form-card">
+        <div class="scarcity">
+          <span class="dot dot-red pulse-dot"></span>
+          <p>선착순 소수 인원 마감 임박 · 오늘 신청분 한정</p>
+        </div>
+        <h2>오늘 자료, 지금 신청하면 바로 보내드려요</h2>
+        <p class="form-subtitle">이름과 연락처만 남기면 끝. 오늘 아침 독일 증시 시황을 받아보세요.</p>
+
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label for="name">이름</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="성함을 입력해 주세요" />
+          </div>
+          <div class="field">
+            <label for="phone">연락처</label>
+            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" required placeholder="010-0000-0000" />
+          </div>
+
+          <!-- 개인정보 동의 (필수) -->
+          <label class="agree">
+            <input id="agree" type="checkbox" required />
+            <span>
+              [필수] <button type="button" class="link" onclick="openModal('privacyModal')">개인정보 수집 및 이용</button>에 동의합니다.
+              정보를 제출하시면 개인정보 수집 및 이용에 동의하는 것으로 간주됩니다.
+            </span>
+          </label>
+
+          <button type="submit" class="btn btn-primary">독일 증시 시황 무료 구독하기</button>
+          <p class="btn-sub-note">✓ 지금 신청 → 오늘 데이터 즉시 발송 · 구독 해지 언제든 가능</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ 오늘의 지수 카드 (실제감 데이터) ============ -->
+    <section class="section mt-8">
+      <div class="idx-head">
+        <h3>오늘 아침 주요 지수</h3>
+        <span class="idx-time" data-market="updated">08:30 업데이트</span>
+      </div>
+      <div class="idx-grid" id="idxGrid">
+        <div class="idx-card" data-symbol="dax">
+          <p class="idx-name">DAX 40</p>
+          <p class="idx-val">25,069</p>
+          <p class="idx-chg up">&#9650; 0.69%</p>
+        </div>
+        <div class="idx-card" data-symbol="estoxx50">
+          <p class="idx-name">유로 스톡스 50</p>
+          <p class="idx-val">6,251</p>
+          <p class="idx-chg up">&#9650; 0.75%</p>
+        </div>
+        <div class="idx-card" data-symbol="spx">
+          <p class="idx-name">S&amp;P 500</p>
+          <p class="idx-val">7,482</p>
+          <p class="idx-chg down">&#9660; 0.28%</p>
+        </div>
+        <div class="idx-card" data-symbol="eurkrw">
+          <p class="idx-name">EUR/KRW</p>
+          <p class="idx-val">1,727</p>
+          <p class="idx-chg up">&#9650; 0.67%</p>
+        </div>
+      </div>
+      <p class="idx-note">* 예시 참고용 수치이며 실시간 시세와 차이가 있을 수 있습니다.</p>
+    </section>
+
+    <!-- ============ 구독하면 받는 것 ============ -->
+    <section class="section mt-8 features">
+      <h3>구독하면 이런 걸 받아요</h3>
+      <div class="feature">
+        <div class="feature-ico">&#128200;</div>
+        <div>
+          <p class="t">DAX가 오늘 왜 움직였는지</p>
+          <p class="d">유럽 지수 흐름과 그날의 이슈를 데이터로 짚어드려요</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-ico">&#128202;</div>
+        <div>
+          <p class="t">시장이 주목한 종목</p>
+          <p class="d">그날 거래·뉴스가 몰린 종목을 참고용으로 정리</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-ico">&#128197;</div>
+        <div>
+          <p class="t">이번 주 챙겨야 할 일정</p>
+          <p class="d">금리 결정, 실적 발표 등 시장에 영향 줄 날짜 미리 안내</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 하단 재-CTA ============ -->
+    <section class="section mt-8">
+      <button class="btn btn-accent" onclick="scrollToForm('bottom_cta')">오늘 자료 무료로 받아보기</button>
+    </section>
+
+    <!-- ============ 푸터 / 컴플라이언스 ============ -->
+    <footer class="footer">
+      <div class="risk-box">
+        <p class="h">&#9888;&#65039; 위험 고지</p>
+        <p>
+          주식 등 금융투자상품은 원금 손실의 위험이 있으며, 투자에 대한 최종 판단과 책임은 투자자 본인에게 있습니다.
+          본 페이지에서 제공하는 데이터 및 시황 분석은 투자 참고용 정보일 뿐이며, 어떠한 수익도 보장하지 않습니다.
+          과거의 데이터가 미래의 수익을 보장하지 않습니다.
+        </p>
+      </div>
+
+      <div class="biz-info">
+        <p class="name">글로벌 마켓 인사이트 (Global Market Insight)</p>
+        <p>본 서비스는 투자 정보 공유 및 시장 분석 데이터 제공을 목적으로 합니다.</p>
+        <p>문의: support@example.com</p>
+      </div>
+
+      <div class="policy-links">
+        <a href="privacy.html">개인정보처리방침</a>
+        <span class="sep">|</span>
+        <a href="terms.html">이용약관</a>
+        <span class="sep">|</span>
+        <button onclick="openModal('riskModal')">투자 위험 고지</button>
+      </div>
+
+      <p class="copyright">&copy; 2026 Global Market Insight. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- ================== [ 모달: 개인정보처리방침 ] ================== -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-overlay" onclick="closeModal('privacyModal')"></div>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <h3>개인정보처리방침</h3>
+        <button class="modal-close" onclick="closeModal('privacyModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>1. 수집하는 개인정보 항목</strong><br />본 서비스는 무료 리포트 발송을 위해 이름, 연락처, 이메일(선택)을 수집합니다.</p>
+        <p><strong>2. 수집 및 이용 목적</strong><br />수집된 정보는 시장 분석 리포트 및 데이터 발송, 서비스 관련 안내 목적으로만 이용됩니다.</p>
+        <p><strong>3. 보유 및 이용 기간</strong><br />구독 해지 또는 이용 목적 달성 시 지체 없이 파기하며, 관련 법령에 따라 보관이 필요한 경우 해당 기간 동안 보관합니다.</p>
+        <p><strong>4. 동의 거부 권리</strong><br />이용자는 개인정보 수집·이용 동의를 거부할 권리가 있으며, 동의 거부 시 무료 리포트 발송 서비스 이용이 제한될 수 있습니다.</p>
+        <p><strong>5. 개인정보 보호책임자</strong><br />문의: support@example.com</p>
+        <p style="margin-top:8px;"><a href="privacy.html" style="text-decoration:underline;color:#1d4ed8;">전체 개인정보처리방침 보기 &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================== [ 모달: 투자 위험 고지 ] ================== -->
+  <div id="riskModal" class="modal">
+    <div class="modal-overlay" onclick="closeModal('riskModal')"></div>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <h3>투자 위험 고지</h3>
+        <button class="modal-close" onclick="closeModal('riskModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>주식 및 해외 증시 관련 금융투자상품은 시장 상황에 따라 <strong>원금의 손실이 발생할 수 있습니다.</strong></p>
+        <p>본 페이지의 데이터와 분석 자료는 객관적 정보 제공을 목적으로 하며, 특정 종목의 매수·매도를 권유하지 않습니다.</p>
+        <p>모든 투자의 최종 판단과 책임은 투자자 본인에게 있으며, 본 서비스는 수익을 보장하지 않습니다.</p>
+        <p>투자 전 충분한 정보 확인과 신중한 검토를 권장합니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================== [ 모바일 하단 고정 CTA 바 ] ================== -->
+  <div id="stickyCta" class="sticky-cta">
+    <button class="btn btn-primary sticky-cta-btn" onclick="scrollToForm('sticky_cta')">
+      독일 증시 시황 무료 구독하기
+    </button>
+  </div>
+
+  <!-- ================== [ 로딩 오버레이 (제출 후 채팅 연결 대기) ] ================== -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-box">
+      <div class="spinner"></div>
+      <p class="loading-title">신청이 접수되었습니다</p>
+      <p class="loading-desc">상담 채팅으로 연결 중입니다. 잠시만 기다려 주세요...</p>
+    </div>
+  </div>
+
+  <!-- 로컬 스크립트 -->
+  <script src="js/script.js"></script>
+  <script src="js/market.js"></script>
+</body>
+</html>
