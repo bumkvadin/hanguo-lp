@@ -1,33 +1,33 @@
 {
-  "updatedAt": "2026-09-23T23:36:37.167Z",
+  "updatedAt": "2026-09-24T23:36:01.242Z",
   "note": "예시 참고용 데이터. 자동 갱신됩니다.",
   "indices": {
     "dax": {
       "name": "DAX 40",
-      "price": "25,410.63",
-      "chgAbs": "-127.12",
-      "chgPct": "-0.50%",
+      "price": "25,266.53",
+      "chgAbs": "-450.18",
+      "chgPct": "-1.75%",
       "dir": "down"
     },
     "estoxx50": {
       "name": "유로 스톡스 50",
-      "price": "6,299.82",
-      "chgAbs": "-23.08",
-      "chgPct": "-0.37%",
-      "dir": "down"
+      "price": "6,272.5",
+      "chgAbs": "+36.30",
+      "chgPct": "+0.58%",
+      "dir": "up"
     },
     "spx": {
       "name": "S&P 500",
-      "price": "7,706.03",
-      "chgAbs": "+154.22",
-      "chgPct": "+2.04%",
+      "price": "7,704.13",
+      "chgAbs": "+66.37",
+      "chgPct": "+0.87%",
       "dir": "up"
     },
     "eurkrw": {
       "name": "EUR/KRW",
-      "price": "1,552.7",
-      "chgAbs": "-30.11",
-      "chgPct": "-1.90%",
+      "price": "1,555.4",
+      "chgAbs": "-37.60",
+      "chgPct": "-2.36%",
       "dir": "down"
     }
   }
